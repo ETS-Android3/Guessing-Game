@@ -10,12 +10,17 @@ import android.os.Message;
 
 public class SplashActivity extends AppCompatActivity {
 
+    ImageView imageView;
     private final int duration = 3000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
+        imageView = findViewById(R.id.image1);
+
+        imageView.animate().alpha(1f).setDuration(5000); //Animation
+        
         new Handler().postDelayed(new Runnable(){
             @Override
             public void run() {
